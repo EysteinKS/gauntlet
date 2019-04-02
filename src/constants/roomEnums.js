@@ -1,0 +1,96 @@
+export const ROOMTYPE = {
+  HALLWAY: "HALLWAY",
+  VOID: "VOID",
+  ENTRANCE: "ENTRANCE",
+  EXIT: "EXIT",
+  SHOP: "SHOP",
+  FOUNTAIN: "FOUNTAIN",
+  ROOM: "ROOM",
+  LARGEROOM: "LARGEROOM",
+  SECRET: "SECRET"
+}
+
+export const ROOMCOLOR = {
+  HALLWAY: "YELLOW",
+  VOID: "BLACK",
+  ENTRANCE: "BLUE",
+  EXIT: "RED",
+  SHOP: "ORANGE",
+  FOUNTAIN: "TURQUOISE",
+  ROOM: "GREEN",
+  LARGEROOM: "GREEN",
+  SECRET: "PURPLE"
+}
+
+export const WALLTYPE = {
+  WALL: "WALL",
+  DOOR: "DOOR",
+  SECRET: "SECRET",
+  OPEN: "OPEN"
+}
+
+export const LIGHTING = {
+  BRIGHT: "BRIGHT",
+  DIM: "DIM",
+  DARK: "DARK"
+}
+
+export const STATUS = {
+  EXPLORED: "EXPLORED",
+  UNEXPLORED: "UNEXPLORED",
+  ACTIVE: "ACTIVE"
+}
+
+export const ENCOUNTERS = {
+  EMPTY: "EMPTY",
+  TREASURE: "TREASURE",
+  BOSS: "BOSS",
+  CREATURES: "CREATURES",
+  SHOP: "SHOP",
+  FOUNTAIN: "FOUNTAIN",
+  PUZZLE: "PUZZLE",
+  TRAP: "TRAP"
+}
+
+const EMPTYCONTENT = null
+
+const TREASURECONTENT = {
+  container: "",
+  dc: 0,
+  lootscore: 0
+}
+
+const BOSSCONTENT = {
+
+}
+
+const CREATURESCONTENT = {
+
+}
+
+const SHOPCONTENT = {
+
+}
+
+const FOUNTAINTCONTENT = {
+
+}
+
+const PUZZLECONTENT = {
+
+}
+
+const TRAPCONTENT = {
+
+}
+
+export const CONTENT = {
+  EMPTY: EMPTYCONTENT,
+  TREASURE: TREASURECONTENT,
+  BOSS: BOSSCONTENT,
+  CREATURES: CREATURESCONTENT,
+  SHOP: SHOPCONTENT,
+  FOUNTAIN: FOUNTAINTCONTENT,
+  PUZZLE: PUZZLECONTENT,
+  TRAP: TRAPCONTENT
+}

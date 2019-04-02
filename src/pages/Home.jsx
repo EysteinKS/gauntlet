@@ -1,6 +1,6 @@
-import React, { Component } from 'react'
+import React, { Component } from 'C:/Users/Eystein/AppData/Local/Microsoft/TypeScript/2.9/node_modules/@types/react'
 
-export default class componentName extends Component {
+export default class Home extends Component {
   render() {
     return (
       <div>

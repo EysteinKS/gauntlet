@@ -1,0 +1,100 @@
+/*TYPES*/
+.Hallway {
+  background-color: rgb(192, 192, 37);
+}
+
+.Void {
+  background-color: #000000;
+}
+
+.Entrance {
+  background-color: #0000b6;
+}
+
+.Exit {
+  background-color: #b40101;
+}
+
+.Shop {
+  background-color: #ffa500;
+}
+
+.Fountain {
+  background-color: #40e0d0;
+}
+
+.Room {
+  background-color: #008000;
+}
+
+.Secret {
+  background-color: #800080;
+}
+
+
+/*WALLS*/
+.NorthWall {
+  border-top-style: solid
+
+}
+
+.NorthDoor {
+  border-top: 1px double
+
+}
+
+.NorthSecret {
+  border-top-style: dotted
+
+}
+
+
+.SouthWall {
+  border-bottom-style: solid
+
+}
+
+.SouthDoor {
+  border-bottom: 1px double
+
+}
+
+.SouthSecret {
+  border-bottom-style: dotted
+
+}
+
+
+.EastWall {
+  border-right-style: solid
+
+}
+
+.EastDoor {
+  border-right: 1px double
+
+}
+
+.EastSecret {
+  border-right-style: dotted
+
+}
+
+.WestWall {
+  border-left-style: solid
+
+}
+
+.WestDoor {
+  border-left: 1px double
+
+}
+
+.WestSecret {
+  border-left-style: dotted
+
+}
+
+.Active {
+  filter: brightness(150%)
+}

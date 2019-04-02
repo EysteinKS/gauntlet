@@ -1,0 +1,18 @@
+.FloorGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 100px);
+  justify-content: center;
+  border: solid;
+}
+
+
+.FloorRoom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  width: 100px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}

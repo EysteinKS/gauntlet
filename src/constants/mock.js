@@ -1,13 +1,5 @@
 import { ROOMTYPE, WALLTYPE, LIGHTING, ENCOUNTERS, CONTENT } from "./roomEnums"
 
-//LEVELS
-export const levelOne = [
-  [aa, ab, ac, ad],
-  [ba, bb, bc, bd],
-  [ca, cb, cc, cd],
-  [da, db, dc, dd]
-]
-
 //ROOMS
 const aa = {
   type: ROOMTYPE.ROOM,
@@ -46,8 +38,8 @@ const ac = {
   walls: {
     N: WALLTYPE.WALL,
     S: WALLTYPE.OPEN,
-    E: WALLTYPE.DOOR,
-    W: WALLTYPE.OPEN
+    E: WALLTYPE.OPEN,
+    W: WALLTYPE.DOOR
   },
   lighting: LIGHTING.DIM,
   encounter: {
@@ -62,8 +54,8 @@ const ad = {
   walls: {
     N: WALLTYPE.WALL,
     S: WALLTYPE.OPEN,
-    E: WALLTYPE.OPEN,
-    W: WALLTYPE.WALL
+    E: WALLTYPE.WALL,
+    W: WALLTYPE.OPEN
   },
   lighting: LIGHTING.DIM,
   encounter: {
@@ -114,8 +106,8 @@ const bd = {
   walls: {
     N: WALLTYPE.OPEN,
     S: WALLTYPE.WALL,
-    E: WALLTYPE.OPEN,
-    W: WALLTYPE.WALL
+    E: WALLTYPE.WALL,
+    W: WALLTYPE.OPEN
   },
   lighting: LIGHTING.DIM,
   encounter: {
@@ -145,8 +137,8 @@ const cb = {
   walls: {
     N: WALLTYPE.DOOR,
     S: WALLTYPE.DOOR,
-    E: WALLTYPE.SECRET,
-    W: WALLTYPE.WALL
+    E: WALLTYPE.WALL,
+    W: WALLTYPE.SECRET
   },
   lighting: LIGHTING.DARK,
   encounter: {
@@ -233,6 +225,13 @@ const dd = {
     content: CONTENT.BOSS
   }
 }
+
+export const levelOne = [
+  [aa, ab, ac, ad],
+  [ba, bb, bc, bd],
+  [ca, cb, cc, cd],
+  [da, db, dc, dd]
+]
 
 //ENCOUNTERS
 
