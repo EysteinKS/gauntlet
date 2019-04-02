@@ -34,7 +34,7 @@
 
 /*WALLS*/
 .NorthWall {
-  border-top-style: solid
+  border-top: 3px inset black
 
 }
 
@@ -44,13 +44,13 @@
 }
 
 .NorthSecret {
-  border-top-style: dotted
+  border-top: dotted
 
 }
 
 
 .SouthWall {
-  border-bottom-style: solid
+  border-bottom: 3px inset black
 
 }
 
@@ -60,13 +60,13 @@
 }
 
 .SouthSecret {
-  border-bottom-style: dotted
+  border-bottom: dotted
 
 }
 
 
 .EastWall {
-  border-right-style: solid
+  border-right: 3px inset black
 
 }
 
@@ -76,12 +76,12 @@
 }
 
 .EastSecret {
-  border-right-style: dotted
+  border-right: dotted
 
 }
 
 .WestWall {
-  border-left-style: solid
+  border-left: 3px inset black
 
 }
 
@@ -91,7 +91,7 @@
 }
 
 .WestSecret {
-  border-left-style: dotted
+  border-left: dotted
 
 }
 
