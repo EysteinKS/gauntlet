@@ -1,4 +1,4 @@
-import React, { Component } from 'C:/Users/Eystein/AppData/Local/Microsoft/TypeScript/2.9/node_modules/@types/react'
+import React, { Component } from 'react'
 
 export default class Home extends Component {
   render() {
