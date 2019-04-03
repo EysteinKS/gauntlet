@@ -94,3 +94,7 @@ export const CONTENT = {
   PUZZLE: PUZZLECONTENT,
   TRAP: TRAPCONTENT
 }
+
+export const ROOMTAGS = {
+  ROOM: "ROOM"
+}
