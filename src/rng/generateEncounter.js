@@ -85,9 +85,9 @@ const generateEncounter = async (
   if (options.filterByTags){
     filteredCreatures = filterByTags(filteredCreatures, tags)
   }
-  filteredCreatures = filterByType(filteredCreatures, "humanoid")
+  //filteredCreatures = filterByType(filteredCreatures, "humanoid")
   console.log(`Returned array of ${filteredCreatures.length} creatures`)
-  
+
   let encounter = addCreatures(filteredCreatures, targetxp, maxrange)
 
   console.log("Random encounter: ", encounter)

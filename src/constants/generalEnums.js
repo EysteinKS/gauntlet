@@ -13,11 +13,11 @@ export const DIFFMOD = {
 export const PLAYER_AMOUNT_MULTIPLIER = {
   0: 1,
   1: 1,
-  2: 1.25,
-  3: 1.5,
-  4: 1.75,
-  5: 2,
-  6: 2.5
+  2: 1.125,
+  3: 1.25,
+  4: 1.375,
+  5: 1.5,
+  6: 1.75
 }
 
 export const CR_TO_XP = {
