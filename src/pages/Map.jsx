@@ -1,33 +1,114 @@
-import React, { Component } from 'react'
-import FloorGrid from "../components/FloorGrid"
-import monsters from "../constants/monsters"
-import generateEncounter from "../rng/generateEncounter"
-import { DIFFICULTY } from "../constants/generalEnums"
-import "../style/Map.css"
+import React, { Component } from "react";
+import FloorGrid from "../components/FloorGrid";
+import EncounterList from "../components/EncounterList";
+import monsters from "../constants/monsters";
+import generateEncounter from "../rng/generateEncounter";
+import { DIFFICULTY } from "../constants/generalEnums";
+import "../style/Map.css";
 
 export default class Map extends Component {
-  constructor(props){
-    super(props)
+  constructor(props) {
+    super(props);
     this.state = {
-      encounter: []
-    }
+      encounter: [],
+      players: 1,
+      level: 1,
+      difficulty: DIFFICULTY.EASY,
+      boss: false
+    };
   }
-  static defaultProps = {
+  static defaultProps = {};
 
-  }
+  handleChange = e => {
+    this.setState({
+      [e.target.name]: e.target.value
+    });
+  };
 
   render() {
-    let encounter = this.state.encounter
+    let encounter = this.state.encounter;
+
+    let playersoptions = [];
+    for (let i = 0; i < 11; i++) {
+      if(!isNaN(i)){
+        playersoptions.push(<option value={i}>{i}</option>);
+      }
+    }
+
+    let leveloptions = [];
+    for (let i = 0; i < 21; i++) {
+      if(!isNaN(i)){
+        leveloptions.push(<option value={i}>{i}</option>);
+      }
+    }
+
     return (
-      <div className="Map">
-        <FloorGrid/>
-        <button onClick={async () => {
-          let ret = await generateEncounter(4, 10, DIFFICULTY.NORMAL, [], monsters )
-          console.log(ret)
-          this.setState({ encounter: ret })
-          }}>Get random encounter</button>
-        <ul>{encounter.map(creature => <li>{creature.name}</li>)}</ul>
-      </div>
-    )
+      <main className="Map">
+        <div className="Floor gridItemA">
+          <FloorGrid />
+          <button
+            //className="gridItemC"
+            onClick={async () => {
+              let ret = await generateEncounter(
+                this.state.players,
+                this.state.level,
+                this.state.difficulty,
+                [],
+                monsters,
+                { boss: this.state.boss }
+              );
+              this.setState({ encounter: ret });
+            }}
+          >
+            Get random encounter
+          </button>
+        </div>
+        {encounter.length ? <EncounterList encounter={encounter} /> : null}
+        <form className="gridItemC">
+          <label>
+            Players:
+            <select
+              name="players"
+              value={this.state.players}
+              onChange={e => this.handleChange(e)}
+            >
+              {playersoptions}
+            </select>
+          </label>
+          <label>
+            Level:
+            <select
+              name="level"
+              value={this.state.level}
+              onChange={e => this.handleChange(e)}
+            >
+              {leveloptions}
+            </select>
+          </label>
+          <label>
+            Difficulty:
+            <select
+              name="difficulty"
+              value={this.state.difficulty}
+              onChange={e => this.handleChange(e)}
+            >
+              <option value={DIFFICULTY.EASY}>Easy</option>
+              <option value={DIFFICULTY.NORMAL}>Normal</option>
+              <option value={DIFFICULTY.HARD}>Hard</option>
+            </select>
+          </label>
+          <label>
+            Boss?
+            <input
+              name="boss"
+              type="checkbox"
+              placeholder="boss?"
+              value={this.state.boss}
+              onChange={e => this.handleChange(e)}
+            />
+          </label>
+        </form>
+      </main>
+    );
   }
 }

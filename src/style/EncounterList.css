@@ -1,0 +1,77 @@
+.CreatureView {
+  display: grid;
+  align-items: center;
+  margin: 0.2em;
+  margin-bottom: 1em
+}
+
+.smallMargin {
+  margin: 0.2em !important
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(5, 20%);
+  align-items: center
+}
+
+.AC {
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+
+.HP {
+  grid-column-start: 3;
+  grid-column-end: 4;
+}
+
+.CR {
+  grid-column-start: 4;
+  grid-column-end: 5;
+}
+
+.abilityGrid {
+  display: grid;
+  grid-template-columns: repeat(5, 20%)
+}
+
+.abilityName {
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+
+.abilityValue {
+  grid-column-start: 3;
+  grid-column-end: 4;
+}
+
+.abilityModifier {
+  grid-column-start: 4;
+  grid-column-end: 5;
+}
+
+h2 {
+  cursor: pointer;
+  margin: 0.2em !important
+}
+
+h3 {
+  cursor: pointer;
+  margin: 0.2em !important
+}
+
+h4 {
+  margin: 0.2em !important
+}
+
+h5 {
+  margin: 0.2em !important
+}
+
+.open {
+  display: block;
+}
+
+.closed {
+  display: none;
+}

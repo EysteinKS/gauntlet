@@ -1,6 +1,37 @@
 .Map {
+  height: 100vh;
+  overflow: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 50%)
+}
+
+.Floor {
   display: flex;
   justify-content: center;
   align-content: center;
   padding: 20px;
+}
+
+.gridItemA {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  height: 400px;
+}
+
+.gridItemB {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  overflow: auto;
+  height: 400px;
+}
+
+.gridItemC {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 3;
 }
