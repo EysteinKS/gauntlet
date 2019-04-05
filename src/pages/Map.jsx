@@ -44,27 +44,11 @@ export default class Map extends Component {
 
     return (
       <main className="Map">
-        <div className="Floor gridItemA">
+        <div className="gridItemA">
+        <div className="Floor">
           <FloorGrid />
-          <button
-            //className="gridItemC"
-            onClick={async () => {
-              let ret = await generateEncounter(
-                this.state.players,
-                this.state.level,
-                this.state.difficulty,
-                [],
-                monsters,
-                { boss: this.state.boss }
-              );
-              this.setState({ encounter: ret });
-            }}
-          >
-            Get random encounter
-          </button>
         </div>
-        {encounter.length ? <EncounterList encounter={encounter} /> : null}
-        <form className="gridItemC">
+        <form>
           <label>
             Players:
             <select
@@ -85,6 +69,7 @@ export default class Map extends Component {
               {leveloptions}
             </select>
           </label>
+          <br/>
           <label>
             Difficulty:
             <select
@@ -107,7 +92,26 @@ export default class Map extends Component {
               onChange={e => this.handleChange(e)}
             />
           </label>
+          <br/>
+          <button
+            onClick={event => {
+              let ret = generateEncounter(
+                this.state.players,
+                this.state.level,
+                this.state.difficulty,
+                [],
+                monsters,
+                { boss: this.state.boss }
+              );
+              this.setState({ encounter: ret });
+              event.preventDefault()
+            }}
+          >
+            Get random encounter
+          </button>
         </form>
+        </div>
+        {encounter.length ? <EncounterList encounter={encounter} /> : null}
       </main>
     );
   }
