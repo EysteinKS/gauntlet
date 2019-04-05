@@ -71,7 +71,7 @@ export const getCreatureAmountMultiplier = (amount) => {
   if(amount <= 1){
     return 1
   }
-  if(amount = 2){
+  if(amount === 2){
     return 1.25
   }
   else {

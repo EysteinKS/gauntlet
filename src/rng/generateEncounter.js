@@ -12,7 +12,7 @@ const filterByCR = (creatures = [], xp = 100) => {
 //Checks if creature contains all required tags, returns array of all matching creatures
 //https://stackoverflow.com/questions/15514907/determining-whether-one-array-contains-the-contents-of-another-array-in-javascri 
 const filterByTags = (creatures = [], tags = []) => creatures.filter(c => tags.every(tag => c.tags.includes(tag)))
-
+// eslint-disable-next-line
 const filterByType = (creatures = [], type = "") => creatures.filter(c => c.type === type)
 
 //Targets a random creature within creature array
@@ -85,7 +85,7 @@ const generateEncounter = async (
   if (options.filterByTags){
     filteredCreatures = filterByTags(filteredCreatures, tags)
   }
-  //filteredCreatures = filterByType(filteredCreatures, "humanoid")
+  filteredCreatures = filterByType(filteredCreatures, "humanoid")
   console.log(`Returned array of ${filteredCreatures.length} creatures`)
 
   let encounter = addCreatures(filteredCreatures, targetxp, maxrange)

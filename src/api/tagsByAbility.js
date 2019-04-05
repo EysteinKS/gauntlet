@@ -1,0 +1,12 @@
+// SET ABILITY_MIN IF 1-3
+// SET ABILITY_LOW IF 4-7
+// SET ABILITY_NORMAL IF 8-13
+// SET ABILITY_HIGH IF 14-19
+// SET ABILITY_GREATER IF 20-27
+// SET ABILITY_MAX IF 28-30
+
+const setTagsByAbilities = () => {
+
+}
+
+export default setTagsByAbilities
