@@ -5,16 +5,6 @@
   grid-template-columns: repeat(2, 50%)
 }
 
-@media(max-width: 700px){
-  .Map{
-    height: 100vh;
-    overflow: auto;
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 48vh;
-  }
-}
-
 .Floor {
   display: flex;
   justify-content: center;
@@ -22,10 +12,6 @@
   height: 40vw;
   padding: 20px;
 }
-
-/*.gridItemA {
-  height: 40vw
-}*/
 
 .gridItemB {
   margin: 20px;
@@ -38,4 +24,27 @@
   grid-column-end: 2;
   grid-row-start: 2;
   grid-row-end: 3;
+}
+
+@media(max-width: 700px){
+  .Map{
+    height: 100vh;
+    overflow: auto;
+    display: grid;
+    grid-template-columns: 100%;
+  }
+
+  .Floor {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    height: 60vw;
+    padding: 20px;
+  }
+
+  .gridItemB {
+    margin: 20px;
+    min-height: 30vh;
+    background-color: rgba(255, 255, 255, 0.5)
+  }
 }

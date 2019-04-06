@@ -94,6 +94,7 @@ export default class Map extends Component {
           </label>
           <br/>
           <button
+            style={{ marginTop: "2vh" }}
             onClick={event => {
               let ret = generateEncounter(
                 this.state.players,

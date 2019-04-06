@@ -16,3 +16,23 @@
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
 }
+
+@media(max-width: 700px){
+  .FloorGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 15vw);
+    justify-content: center;
+    border: solid;
+  }
+
+  .FloorRoom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15vw;
+    width: 15vw;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+  }
+}

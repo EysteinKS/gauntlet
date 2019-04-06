@@ -98,9 +98,9 @@ const CreatureView = ({ creature = {} }) => {
       {creature.actions ? (
         <CreatureActions actions={creature.actions} type="actions" />
       ) : null}
-      {creature.special_abilites ? (
+      {creature.special_abilities ? (
         <CreatureActions
-          actions={creature.special_abilites}
+          actions={creature.special_abilities}
           type="special_abilities"
         />
       ) : null}
