@@ -166,7 +166,7 @@ const cd = {
   type: ROOMTYPE.EXIT,
   walls: {
     N: WALLTYPE.WALL,
-    S: WALLTYPE.OPEN,
+    S: WALLTYPE.DOOR,
     E: WALLTYPE.WALL,
     W: WALLTYPE.WALL
   },
@@ -212,9 +212,9 @@ const dc = {
 }
 
 const dd = {
-  type: ROOMTYPE.EXIT,
+  type: ROOMTYPE.ROOM,
   walls: {
-    N: WALLTYPE.OPEN,
+    N: WALLTYPE.DOOR,
     S: WALLTYPE.WALL,
     E: WALLTYPE.WALL,
     W: WALLTYPE.DOOR
