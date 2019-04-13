@@ -3,6 +3,7 @@ import FloorGrid from "../components/FloorGrid";
 import EncounterList from "../components/EncounterList";
 import monsters from "../constants/monsters";
 import generateEncounter from "../rng/generateEncounter";
+import generateFloor from "../rng/generateFloor"
 import { DIFFICULTY } from "../constants/generalEnums";
 import "../style/Map.css";
 
@@ -111,6 +112,12 @@ export default class Map extends Component {
             Get random encounter
           </button>
         </form>
+        <button onClick={(e) => {
+            generateFloor()
+            e.preventDefault()
+            }}>
+            Check shortest path throught floor
+          </button>
         </div>
         {encounter.length ? <EncounterList encounter={encounter} /> : null}
       </main>
