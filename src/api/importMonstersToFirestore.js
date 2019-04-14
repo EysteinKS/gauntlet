@@ -76,11 +76,3 @@ const importMonsters = ( monsters = []) => {
 }
 
 export default importMonsters
-
-const exampleMonsterWithTags = {
-  "index": 1,
-  "name": "Aboleth",
-  "tags": [
-
-  ]
-}

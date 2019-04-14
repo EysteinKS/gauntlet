@@ -1,0 +1,19 @@
+export const SIGNUP_BEGIN = 'SIGNUP_BEGIN'
+
+export const SIGNUP_SUCCESS = 'SIGNUP_SUCCESS'
+
+export const SIGNUP_FAILURE = 'SIGNUP_FAILURE'
+
+
+export const SIGNIN_BEGIN = 'SIGNIN_BEGIN'
+
+export const SIGNIN_SUCCESS = 'SIGNIN_SUCCESS'
+
+export const SIGNIN_FAILURE = 'SIGNIN_FAILURE'
+
+
+export const LOGOUT_BEGIN = 'LOGOUT_BEGIN'
+
+export const LOGOUT_SUCCESS = 'LOGOUT_SUCCESS'
+
+export const LOGOUT_FAILURE = 'LOGOUT_FAILURE'

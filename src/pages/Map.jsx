@@ -1,7 +1,7 @@
 import React, { Component, useState } from "react";
 import FloorGrid from "../components/FloorGrid";
 import EncounterList from "../components/EncounterList";
-import monsters from "../constants/monsters";
+//import monsters from "../constants/monsters";
 import generateEncounter from "../rng/generateEncounter";
 import generateFloor from "../rng/generateFloor";
 import getMonsters from "../api/getMonsters";
@@ -14,13 +14,8 @@ export default class Map extends Component {
     super(props);
     this.state = {
       encounter: [],
-      players: 1,
-      level: 1,
-      difficulty: DIFFICULTY.EASY,
-      boss: false
     };
   }
-  static defaultProps = {};
 
   setEncounter = (encounter) => {
     this.setState({ encounter: encounter })
@@ -28,6 +23,7 @@ export default class Map extends Component {
 
   render() {
     let encounter = this.state.encounter;
+    let monsters = this.props.monsters
 
     return (
       <main className="Map">
@@ -35,7 +31,7 @@ export default class Map extends Component {
           <div className="Floor">
             <FloorGrid />
           </div>
-          <EncounterForm setEncounter={(e) => this.setEncounter(e)}/>
+          <EncounterForm setEncounter={(e) => this.setEncounter(e)} monsters={monsters}/>
           <button
             onClick={e => {
               generateFloor();
@@ -59,7 +55,7 @@ export default class Map extends Component {
   }
 }
 
-const EncounterForm = ({ setEncounter }) => {
+const EncounterForm = ({ setEncounter, monsters }) => {
   const [players, setPlayers] = useState(1)
   const [level, setLevel] = useState(1)
   const [difficulty, setDifficulty] = useState(DIFFICULTY.EASY)
@@ -128,6 +124,7 @@ const EncounterForm = ({ setEncounter }) => {
       <button
         style={{ marginTop: "2vh" }}
         onClick={event => {
+          event.preventDefault();
           let ret = generateEncounter(
             players,
             level,
@@ -137,7 +134,6 @@ const EncounterForm = ({ setEncounter }) => {
             { boss: boss }
           );
           setEncounter(ret);
-          event.preventDefault();
         }}
       >
         Get random encounter

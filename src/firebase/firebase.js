@@ -1,15 +1,9 @@
 import firebase from 'firebase/app';
 import 'firebase/auth';
 import 'firebase/firestore';
+import { firebaseconfig } from "../../env"
 
-const config = {
-  apiKey: "AIzaSyBBL65QlYuR0uFm_dUlxJEm1hjMRtnB1SA",
-  authDomain: "dndgauntlet.firebaseapp.com",
-  databaseURL: "https://dndgauntlet.firebaseio.com",
-  projectId: "dndgauntlet",
-  storageBucket: "dndgauntlet.appspot.com",
-  messagingSenderId: "771782707626"
-};
+const config = firebaseconfig
 
 if (!firebase.apps.length) {
     firebase.initializeApp(config);

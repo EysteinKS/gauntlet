@@ -8,8 +8,7 @@ export const getFirestoreDoc = async refString => {
     .then(async docRef => {
       return await docRef.data();
     })
-    .catch(error =>
-      console.log(`Error while importing from ${refString}:`, error)
+    .catch(error => { throw new Error(error) }
     );
   await console.log("Got ", refString);
   return thisDoc;
